@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CognitoDZ | Expert Software Development Team</title>
+  <meta name="description" content="CognitoDZ is a freelance software development team specializing in mobile apps, web apps, ERP systems, AI integration, web scraping, automation, and custom software. Based in Algeria, serving clients worldwide."/>
+  <meta name="keywords" content="software development, mobile apps, web apps, ERP, AI integration, web scraping, automation, CRM, Algeria, freelance developers"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://cognitodz.com/"/>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="CognitoDZ | Expert Software Development Team"/>
+  <meta property="og:description" content="Freelance dev team building mobile apps, web apps, ERP systems, and AI-powered solutions."/>
+  <meta property="og:url" content="https://cognitodz.com/"/>
+  <meta property="og:site_name" content="CognitoDZ"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="CognitoDZ | Expert Software Development"/>
+  <meta name="twitter:description" content="Freelance dev team — mobile, web, ERP, AI, automation & more."/>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/src/style.css"/>
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"CognitoDZ","url":"https://cognitodz.com","description":"Expert freelance software development team specializing in mobile apps, web apps, ERP, AI integration, and automation.","foundingDate":"2022","contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"contact@cognitodz.com"},"sameAs":["https://github.com/cognitodz","https://linkedin.com/company/cognitodz"]}
+  </script>
+</head>
+<body x-data>
+
+<!-- ═══════════════════════  NAVBAR  ══════════════════════════════════════════ -->
+<nav id="navbar" x-data="navbar" :class="{ scrolled }" aria-label="Main navigation">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+    <!-- Logo -->
+    <a href="#hero" style="display:flex;align-items:center;gap:0.625rem;text-decoration:none;flex-shrink:0;">
+      <div style="width:36px;height:36px;background:linear-gradient(135deg,#3ecf8e,#00d4ff);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:#080810;box-shadow:0 0 20px rgba(62,207,142,0.4);">CG</div>
+      <span style="font-weight:700;font-size:1.15rem;color:#ededef;letter-spacing:-0.02em;">Cognito<span style="color:#3ecf8e;">DZ</span></span>
+    </a>
+    <!-- Desktop links -->
+    <div style="display:flex;align-items:center;gap:2rem;" class="hidden-mobile">
+      <a href="#about"    class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#stack"    class="nav-link">Stack</a>
+      <a href="#contact"  class="nav-link">Contact</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <a href="#contact" class="btn-neon" style="padding:0.55rem 1.25rem;font-size:0.85rem;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Get a Quote
+      </a>
+      <!-- Hamburger -->
+      <button @click="menuOpen=true" id="hamburger" aria-label="Open menu" style="display:none;background:transparent;border:1px solid rgba(62,207,142,0.3);border-radius:6px;padding:0.4rem 0.6rem;cursor:pointer;color:#3ecf8e;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" :class="{ open: $data.menuOpen }" x-data="navbar">
+  <button @click="menuOpen=false" style="position:absolute;top:1.5rem;right:1.5rem;background:transparent;border:none;cursor:pointer;color:#ededef;" aria-label="Close menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="#about"     class="nav-link" @click="menuOpen=false">About</a>
+  <a href="#services"  class="nav-link" @click="menuOpen=false">Services</a>
+  <a href="#portfolio" class="nav-link" @click="menuOpen=false">Portfolio</a>
+  <a href="#stack"     class="nav-link" @click="menuOpen=false">Stack</a>
+  <a href="#contact"   class="nav-link" @click="menuOpen=false">Contact</a>
+  <a href="#contact"   class="btn-neon"  @click="menuOpen=false">Get a Quote</a>
+</div>
+
+<!-- ═══════════════════════  HERO  ════════════════════════════════════════════ -->
+<section id="hero" class="cyber-grid scanlines">
+  <div class="hero-gradient"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="container" style="position:relative;z-index:2;padding-top:5rem;">
+    <div style="max-width:760px;">
+      <div class="section-label reveal">
+        <span class="mono">// cognitodz.software</span>
+        <span class="cursor-blink" style="color:#3ecf8e;">█</span>
+      </div>
+      <h1 class="reveal reveal-delay-1" style="font-size:clamp(2.5rem,6vw,5rem);font-weight:800;line-height:1.1;letter-spacing:-0.03em;margin-bottom:1.5rem;">
+        We Build <span class="gradient-text">Digital Systems</span><br/>That Actually <span style="color:#ededef;position:relative;">Scale<span style="position:absolute;bottom:-4px;left:0;width:100%;height:2px;background:linear-gradient(90deg,#3ecf8e,#00d4ff);border-radius:2px;"></span></span>
+      </h1>
+      <p class="reveal reveal-delay-2" style="font-size:1.2rem;color:#9293a5;max-width:600px;margin-bottom:2.5rem;line-height:1.7;">
+        CognitoDZ is a collective of expert engineers crafting <strong style="color:#ededef;">mobile apps</strong>, <strong style="color:#ededef;">web platforms</strong>, <strong style="color:#ededef;">ERP systems</strong>, and <strong style="color:#ededef;">AI-powered solutions</strong> — from concept to deployment.
+      </p>
+      <div class="reveal reveal-delay-3" style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;">
+        <a href="#portfolio" class="btn-neon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          View Our Work
+        </a>
+        <a href="#contact" class="btn-outline">Start a Project →</a>
+      </div>
+      <!-- Terminal preview -->
+      <div class="reveal reveal-delay-4 glass terminal-card" style="margin-top:3rem;border-radius:12px;padding:1.25rem 1.5rem;max-width:500px;">
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;">
+          <span style="width:10px;height:10px;border-radius:50%;background:#f87171;"></span>
+          <span style="width:10px;height:10px;border-radius:50%;background:#fbbf24;"></span>
+          <span style="width:10px;height:10px;border-radius:50%;background:#3ecf8e;"></span>
+          <span style="margin-left:0.5rem;color:#9293a5;font-size:0.7rem;">cognitodz ~ terminal</span>
+        </div>
+        <div class="terminal-line"><span class="terminal-prompt">$</span><span class="terminal-cmd">git clone cognitodz/your-idea.git</span></div>
+        <div class="terminal-line"><span class="terminal-output">✓ Requirements analyzed</span></div>
+        <div class="terminal-line"><span class="terminal-output">✓ Architecture designed</span></div>
+        <div class="terminal-line"><span class="terminal-output">✓ System built &amp; deployed</span></div>
+        <div class="terminal-line"><span class="terminal-prompt">$</span><span class="terminal-cmd" style="color:#3ecf8e;">Your project is live 🚀<span class="cursor-blink">_</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════  STATS  ═══════════════════════════════════════════ -->
+<section style="padding:2.5rem 0;border-top:1px solid rgba(62,207,142,0.08);border-bottom:1px solid rgba(62,207,142,0.08);background:rgba(15,15,26,0.5);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);" class="stats-grid">
+      <div class="stat-card reveal">
+        <div style="font-size:2.4rem;font-weight:800;font-family:'Space Grotesk',sans-serif;" class="gradient-text">
+          <span data-count="40">0</span>+
+        </div>
+        <div style="color:#9293a5;font-size:0.875rem;margin-top:0.25rem;">Projects Delivered</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-1">
+        <div style="font-size:2.4rem;font-weight:800;" class="gradient-text">
+          <span data-count="8">0</span>+
+        </div>
+        <div style="color:#9293a5;font-size:0.875rem;margin-top:0.25rem;">Expert Engineers</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div style="font-size:2.4rem;font-weight:800;" class="gradient-text">
+          <span data-count="3">0</span>+
+        </div>
+        <div style="color:#9293a5;font-size:0.875rem;margin-top:0.25rem;">Years Experience</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-3">
+        <div style="font-size:2.4rem;font-weight:800;" class="gradient-text">
+          <span data-count="25">0</span>+
+        </div>
+        <div style="color:#9293a5;font-size:0.875rem;margin-top:0.25rem;">Happy Clients</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════  ABOUT  ═══════════════════════════════════════════ -->
+<section id="about" class="section-pad" style="position:relative;overflow:hidden;">
+  <div class="dot-grid"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="about-grid">
+      <!-- Left -->
+      <div>
+        <p class="section-label reveal">About Us</p>
+        <h2 class="reveal reveal-delay-1" style="font-size:clamp(1.8rem,3.5vw,2.75rem);font-weight:800;line-height:1.2;margin-bottom:1.5rem;letter-spacing:-0.02em;">
+          A Team Obsessed With <span class="gradient-text">Engineering Excellence</span>
+        </h2>
+        <p class="reveal reveal-delay-2" style="color:#9293a5;line-height:1.8;margin-bottom:1.25rem;">
+          CognitoDZ was founded by engineers who were tired of mediocre software. We bring together specialists in full-stack development, mobile engineering, data architecture, and AI to build systems that stand the test of scale.
+        </p>
+        <p class="reveal reveal-delay-3" style="color:#9293a5;line-height:1.8;margin-bottom:2rem;">
+          From Algiers to the world — we work remotely with clients across Europe, the Middle East, and North America, delivering production-grade software with a startup's speed and an enterprise's precision.
+        </p>
+        <div class="reveal reveal-delay-4" style="display:flex;flex-direction:column;gap:1rem;">
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.4rem;font-size:0.875rem;">
+              <span>On-Time Delivery</span><span style="color:#3ecf8e;font-weight:600;">96%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--tw-scale-x:0.96;" data-width="96"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.4rem;font-size:0.875rem;">
+              <span>Client Satisfaction</span><span style="color:#3ecf8e;font-weight:600;">98%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" data-width="98"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.4rem;font-size:0.875rem;">
+              <span>Repeat Clients</span><span style="color:#3ecf8e;font-weight:600;">72%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" data-width="72"></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- Right - Values cards -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div class="glass glass-hover reveal" style="border-radius:16px;padding:1.5rem;">
+          <div style="font-size:2rem;margin-bottom:0.75rem;">⚡</div>
+          <h3 style="font-weight:700;margin-bottom:0.5rem;font-size:1rem;">Speed</h3>
+          <p style="color:#9293a5;font-size:0.85rem;line-height:1.6;">Agile delivery cycles. MVPs in weeks, not months.</p>
+        </div>
+        <div class="glass glass-hover reveal reveal-delay-1" style="border-radius:16px;padding:1.5rem;margin-top:1.5rem;">
+          <div style="font-size:2rem;margin-bottom:0.75rem;">🔒</div>
+          <h3 style="font-weight:700;margin-bottom:0.5rem;font-size:1rem;">Security</h3>
+          <p style="color:#9293a5;font-size:0.85rem;line-height:1.6;">Security-first architecture. RLS, encryption, audits.</p>
+        </div>
+        <div class="glass glass-hover reveal reveal-delay-2" style="border-radius:16px;padding:1.5rem;">
+          <div style="font-size:2rem;margin-bottom:0.75rem;">📐</div>
+          <h3 style="font-weight:700;margin-bottom:0.5rem;font-size:1rem;">Precision</h3>
+          <p style="color:#9293a5;font-size:0.85rem;line-height:1.6;">Clean code, tested systems, zero-cut-corner policy.</p>
+        </div>
+        <div class="glass glass-hover reveal reveal-delay-3" style="border-radius:16px;padding:1.5rem;margin-top:1.5rem;">
+          <div style="font-size:2rem;margin-bottom:0.75rem;">🌐</div>
+          <h3 style="font-weight:700;margin-bottom:0.5rem;font-size:1rem;">Scale</h3>
+          <p style="color:#9293a5;font-size:0.85rem;line-height:1.6;">Built to handle growth — from 10 to 10M users.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════  SERVICES  ════════════════════════════════════════ -->
+<section id="services" class="section-pad" style="background:var(--bg-surface);">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto 4rem;">
+      <p class="section-label reveal" style="justify-content:center;">What We Do</p>
+      <h2 class="reveal reveal-delay-1" style="font-size:clamp(1.8rem,3.5vw,2.75rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:1rem;">
+        End-to-End <span class="gradient-text">Software Services</span>
+      </h2>
+      <p class="reveal reveal-delay-2" style="color:#9293a5;line-height:1.7;">From a landing page to a full AI-powered enterprise system — we cover the entire digital product spectrum.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;" class="services-grid">
+      <!-- Cards -->
+      <div class="service-card glass reveal" style="border-radius:16px;border:1px solid rgba(62,207,142,0.1);">
+        <div class="service-icon" style="background:rgba(62,207,142,0.12);">📱</div>
+        <h3 style="font-weight:700;font-size:1.1rem;margin-bottom:0.625rem;">Mobile Development</h3>
+        <p style="color:#9293a5;font-size:0.875rem;line-height:1.7;">iOS &amp; Android apps built with React Native and Flutter — native performance, cross-platform reach.</p>
+        <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tech-badge">React Native</span><span class="tech-badge">Flutter</span><span class="tech-badge">Expo</span>
+        </div>
+      </div>
+      <div class="service-card glass reveal reveal-delay-1" style="border-radius:16px;border:1px solid rgba(62,207,142,0.1);">
+        <div class="service-icon" style="background:rgba(0,212,255,0.12);">🌐</div>
+        <h3 style="font-weight:700;font-size:1.1rem;margin-bottom:0.625rem;">Web Applications</h3>
+        <p style="color:#9293a5;font-size:0.875rem;line-height:1.7;">High-performance web apps — SaaS platforms, dashboards, marketplaces, PWAs using modern frameworks.</p>
+        <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tech-badge">Next.js</span><span class="tech-badge">Vue</span><span class="tech-badge">Django</span>
+        </div>
+      </div>
+      <div class="service-card glass reveal reveal-delay-2" style="border-radius:16px;border:1px solid rgba(62,207,142,0.1);">
+        <div class="service-icon" style="background:rgba(124,58,237,0.12);">⚙️</div>
+        <h3 style="font-weight:700;font-size:1.1rem;margin-bottom:0.625rem;">ERP &amp; CRM Systems</h3>
+        <p style="color:#9293a5;font-size:0.875rem;line-height:1.7;">Custom enterprise resource planning and CRM platforms tailored to your exact business workflows.</p>
+        <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tech-badge">Django</span><span class="tech-badge">PostgreSQL</span><span class="tech-badge">REST</span>
+        </div>
+      </div>
+      <div class="service-card glass reveal" style="border-radius:16px;border:1px solid rgba(62,207,142,0.1);">
+        <div class="service-icon" style="background:rgba(0,212,255,0.12);">🧠</div>
+        <h3 style="font-weight:700;font-size:1.1rem;margin-bottom:0.625rem;">AI Integration</h3>
+        <p style="color:#9293a5;font-size:0.875rem;line-height:1.7;">Embed LLMs, computer vision, NLP, and predictive ML models directly into your product pipelines.</p>
+        <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tech-badge">OpenAI</span><span class="tech-badge">LangChain</span><span class="tech-badge">Python</span>
+        </div>
+      </div>
+      <div class="service-card glass reveal reveal-delay-1" style="border-radius:16px;border:1px solid rgba(62,207,142,0.1);">
+        <div class="service-icon" style="background:rgba(245,158,11,0.12);">🕷️</div>
+        <h3 style="font-weight:700;font-size:1.1rem;margin-bottom:0.625rem;">Web Scraping</h3>
+        <p style="color:#9293a5;font-size:0.875rem;line-height:1.7;">Reliable, high-volume data pipelines — competitive intelligence, price monitoring, lead extraction.</p>
+        <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tech-badge">Scrapy</span><span class="tech-badge">Playwright</span><span class="tech-badge">Redis</span>
+        </div>
+      </div>
+      <div class="service-card glass reveal reveal-delay-2" style="border-radius:16px;border:1px solid rgba(62,207,142,0.1);">
+        <div class="service-icon" style="background:rgba(62,207,142,0.12);">🤖</div>
+        <h3 style="font-weight:700;font-size:1.1rem;margin-bottom:0.625rem;">System Automation</h3>
+        <p style="color:#9293a5;font-size:0.875rem;line-height:1.7;">End-to-end workflow automation — CI/CD pipelines, scheduled jobs, RPA, and infrastructure as code.</p>
+        <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tech-badge">Python</span><span class="tech-badge">Docker</span><span class="tech-badge">GitHub Actions</span>
+        </div>
+      </div>
+      <div class="service-card glass reveal" style="border-radius:16px;border:1px solid rgba(62,207,142,0.1);">
+        <div class="service-icon" style="background:rgba(240,171,252,0.12);">🗄️</div>
+        <h3 style="font-weight:700;font-size:1.1rem;margin-bottom:0.625rem;">Database Design</h3>
+        <p style="color:#9293a5;font-size:0.875rem;line-height:1.7;">Schema design, data modeling, query optimisation, migrations, and scalable data warehouse architecture.</p>
+        <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tech-badge">PostgreSQL</span><span class="tech-badge">Supabase</span><span class="tech-badge">Redis</span>
+        </div>
+      </div>
+      <div class="service-card glass reveal reveal-delay-1" style="border-radius:16px;border:1px solid rgba(62,207,142,0.1);">
+        <div class="service-icon" style="background:rgba(124,58,237,0.12);">🎨</div>
+        <h3 style="font-weight:700;font-size:1.1rem;margin-bottom:0.625rem;">UI / UX Design</h3>
+        <p style="color:#9293a5;font-size:0.875rem;line-height:1.7;">Research-driven interface design and prototyping — stunning, accessible, and conversion-optimised.</p>
+        <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tech-badge">Figma</span><span class="tech-badge">Tailwind</span><span class="tech-badge">Framer</span>
+        </div>
+      </div>
+      <div class="service-card glass reveal reveal-delay-2" style="border-radius:16px;border:1px solid rgba(62,207,142,0.1);">
+        <div class="service-icon" style="background:rgba(0,212,255,0.12);">☁️</div>
+        <h3 style="font-weight:700;font-size:1.1rem;margin-bottom:0.625rem;">DevOps &amp; Cloud</h3>
+        <p style="color:#9293a5;font-size:0.875rem;line-height:1.7;">Cloud-native deployments, container orchestration, monitoring, and infrastructure automation on AWS/GCP.</p>
+        <div style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+          <span class="tech-badge">Docker</span><span class="tech-badge">Terraform</span><span class="tech-badge">AWS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════  PORTFOLIO  ═══════════════════════════════════════ -->
+<section id="portfolio" class="section-pad" x-data="portfolio">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto 3rem;">
+      <p class="section-label reveal" style="justify-content:center;">Our Work</p>
+      <h2 class="reveal reveal-delay-1" style="font-size:clamp(1.8rem,3.5vw,2.75rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:1rem;">
+        Featured <span class="gradient-text">Projects</span>
+      </h2>
+      <p class="reveal reveal-delay-2" style="color:#9293a5;line-height:1.7;">A selection of systems we've designed, built, and shipped for clients worldwide.</p>
+    </div>
+    <!-- Filter tabs -->
+    <div class="reveal" style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin-bottom:3rem;">
+      <template x-for="f in filters" :key="f.id">
+        <button class="filter-btn" :class="{ active: activeFilter === f.id }" @click="setFilter(f.id)" x-text="f.label"></button>
+      </template>
+    </div>
+    <!-- Project grid -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;" class="portfolio-grid">
+      <template x-for="p in filtered" :key="p.id">
+        <div class="project-card glass" style="border:1px solid rgba(62,207,142,0.1);">
+          <!-- Color block header -->
+          <div style="height:140px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden;" :style="`background:linear-gradient(135deg,${p.color}22,${p.color}08)`">
+            <div :style="`position:absolute;inset:0;background:radial-gradient(circle at 30% 50%,${p.color}30,transparent 70%)`"></div>
+            <span style="position:relative;z-index:1;" x-text="p.emoji"></span>
+          </div>
+          <div style="padding:1.5rem;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:0.5rem;margin-bottom:0.625rem;">
+              <h3 style="font-weight:700;font-size:1.05rem;" x-text="p.title"></h3>
+              <span class="mono" style="font-size:0.65rem;padding:0.2rem 0.6rem;border-radius:4px;white-space:nowrap;flex-shrink:0;" :style="`background:${p.color}20;color:${p.color};border:1px solid ${p.color}40`" x-text="p.category"></span>
+            </div>
+            <p style="color:#9293a5;font-size:0.875rem;line-height:1.6;margin-bottom:1.25rem;" x-text="p.desc"></p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+              <template x-for="tag in p.tags" :key="tag">
+                <span class="tech-badge" x-text="tag"></span>
+              </template>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+    <!-- Empty state -->
+    <div x-show="filtered.length === 0" style="text-align:center;padding:4rem;color:#9293a5">No projects in this category yet.</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════  TECH STACK  ══════════════════════════════════════ -->
+<section id="stack" class="section-pad" style="background:var(--bg-surface);">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto 3.5rem;">
+      <p class="section-label reveal" style="justify-content:center;">Our Arsenal</p>
+      <h2 class="reveal reveal-delay-1" style="font-size:clamp(1.8rem,3.5vw,2.75rem);font-weight:800;letter-spacing:-0.02em;">
+        Technologies We <span class="gradient-text">Master</span>
+      </h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:1rem;">
+      <div class="tech-logo reveal"><span>⚛️</span><span style="font-size:0.75rem;color:#9293a5;font-weight:500;">React</span></div>
+      <div class="tech-logo reveal reveal-delay-1"><span>▲</span><span style="font-size:0.75rem;color:#9293a5;font-weight:500;">Next.js</span></div>
+      <div class="tech-logo reveal reveal-delay-2"><span>🐍</span><span style="font-size:0.75rem;color:#9293a5;font-weight:500;">Python</span></div>
+      <div class="tech-logo reveal reveal-delay-1"><span>🦋</span><span style="font-size:0.75rem;color:#9293a5;font-weight:500;">Flutter</span></div>
+      <div class="tech-logo reveal reveal-delay-2"><span>🟢</span><span style="font-size:0.75rem;color:#9293a5;font-weight:500;">Node.js</span></div>
+      <div class="tech-logo reveal"><span>🐘</span><span style="font-size:0.75rem;color:#9293a5;font-weight:500;">PostgreSQL</span></div>
+      <div class="tech-logo reveal reveal-delay-1"><span>🔥</span><span style="font-size:0.75rem;color:#9293a5;font-weight:500;">Supabase</span></div>
+      <div class="tech-logo reveal reveal-delay-2"><span>🐳</span><span style="font-size:0.75rem;color:#9293a5;font-weight:500;">Docker</span></div>
+      <div class="tech-logo reveal"><span>☁️</span><span style="font-size:0.75rem;color:#9293a5;font-weight:500;">AWS</span></div>
+      <div class="tech-logo reveal reveal-delay-1"><span>🤖</span><span style="font-size:0.75rem;color:#9293a5;font-weight:500;">OpenAI</span></div>
+      <div class="tech-logo reveal reveal-delay-2"><span>🌿</span><span style="font-size:0.75rem;color:#9293a5;font-weight:500;">Django</span></div>
+      <div class="tech-logo reveal"><span>💚</span><span style="font-size:0.75rem;color:#9293a5;font-weight:500;">Vue.js</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════  TESTIMONIALS  ════════════════════════════════════ -->
+<section class="section-pad" style="overflow:hidden;">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto 3.5rem;">
+      <p class="section-label reveal" style="justify-content:center;">Client Voices</p>
+      <h2 class="reveal reveal-delay-1" style="font-size:clamp(1.8rem,3.5vw,2.75rem);font-weight:800;letter-spacing:-0.02em;">
+        What Our <span class="gradient-text">Clients Say</span>
+      </h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;" class="testimonials-grid">
+      <div class="glass reveal" style="border-radius:16px;padding:2rem;border:1px solid rgba(62,207,142,0.1);">
+        <div style="font-size:2rem;color:#3ecf8e;margin-bottom:1rem;line-height:1;">"</div>
+        <p style="color:#9293a5;line-height:1.8;margin-bottom:1.5rem;font-size:0.95rem;">CognitoDZ delivered our ERP in record time. The system handles our 50-person team with zero hiccups. Communication was stellar throughout.</p>
+        <div style="display:flex;align-items:center;gap:0.875rem;">
+          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#3ecf8e,#00d4ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#080810;font-size:0.9rem;flex-shrink:0;">KA</div>
+          <div><div style="font-weight:600;font-size:0.9rem;">Karim Ait-Saïd</div><div style="color:#9293a5;font-size:0.8rem;">CEO, LogiTrack DZ</div></div>
+        </div>
+      </div>
+      <div class="glass reveal reveal-delay-1" style="border-radius:16px;padding:2rem;border:1px solid rgba(62,207,142,0.1);">
+        <div style="font-size:2rem;color:#3ecf8e;margin-bottom:1rem;line-height:1;">"</div>
+        <p style="color:#9293a5;line-height:1.8;margin-bottom:1.5rem;font-size:0.95rem;">The AI dashboard they built cut our data analysis time by 70%. The code is clean, documented, and the team was incredibly proactive with suggestions.</p>
+        <div style="display:flex;align-items:center;gap:0.875rem;">
+          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#f0abfc);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:0.9rem;flex-shrink:0;">SM</div>
+          <div><div style="font-weight:600;font-size:0.9rem;">Sofia Martinez</div><div style="color:#9293a5;font-size:0.8rem;">CTO, DataPulse SaaS</div></div>
+        </div>
+      </div>
+      <div class="glass reveal reveal-delay-2" style="border-radius:16px;padding:2rem;border:1px solid rgba(62,207,142,0.1);">
+        <div style="font-size:2rem;color:#3ecf8e;margin-bottom:1rem;line-height:1;">"</div>
+        <p style="color:#9293a5;line-height:1.8;margin-bottom:1.5rem;font-size:0.95rem;">Our mobile app went from concept to App Store in 10 weeks. Users love the performance. CognitoDZ are now our go-to team for all dev work.</p>
+        <div style="display:flex;align-items:center;gap:0.875rem;">
+          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#00d4ff,#3ecf8e);display:flex;align-items:center;justify-content:center;font-weight:700;color:#080810;font-size:0.9rem;flex-shrink:0;">TB</div>
+          <div><div style="font-weight:600;font-size:0.9rem;">Thomas Blanc</div><div style="color:#9293a5;font-size:0.8rem;">Founder, AppVenture FR</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════  CONTACT  ═════════════════════════════════════════ -->
+<section id="contact" class="section-pad" style="background:var(--bg-surface);position:relative;overflow:hidden;">
+  <div class="orb" style="width:500px;height:500px;background:radial-gradient(circle,rgba(62,207,142,0.08),transparent 70%);top:-200px;right:-200px;"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;" class="contact-grid">
+      <!-- Left info -->
+      <div>
+        <p class="section-label reveal">Contact Us</p>
+        <h2 class="reveal reveal-delay-1" style="font-size:clamp(1.8rem,3.5vw,2.75rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:1rem;">
+          Let's Build Something <span class="gradient-text">Remarkable</span>
+        </h2>
+        <p class="reveal reveal-delay-2" style="color:#9293a5;line-height:1.8;margin-bottom:2.5rem;">Have a project in mind? Tell us about it. We typically respond within 24 hours and can start scoping your project within a week.</p>
+        <div style="display:flex;flex-direction:column;gap:1.25rem;">
+          <div class="reveal" style="display:flex;align-items:center;gap:1rem;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(62,207,142,0.1);border:1px solid rgba(62,207,142,0.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">📧</div>
+            <div><div style="font-size:0.8rem;color:#9293a5;margin-bottom:0.1rem;">Email</div><a href="mailto:contact@cognitodz.com" style="color:#ededef;text-decoration:none;font-weight:500;font-size:0.95rem;">contact@cognitodz.com</a></div>
+          </div>
+          <div class="reveal reveal-delay-1" style="display:flex;align-items:center;gap:1rem;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(62,207,142,0.1);border:1px solid rgba(62,207,142,0.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">💬</div>
+            <div><div style="font-size:0.8rem;color:#9293a5;margin-bottom:0.1rem;">WhatsApp</div><a href="#" style="color:#ededef;text-decoration:none;font-weight:500;font-size:0.95rem;">+213 (0) --- --- ---</a></div>
+          </div>
+          <div class="reveal reveal-delay-2" style="display:flex;align-items:center;gap:1rem;">
+            <div style="width:44px;height:44px;border-radius:10px;background:rgba(62,207,142,0.1);border:1px solid rgba(62,207,142,0.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">📍</div>
+            <div><div style="font-size:0.8rem;color:#9293a5;margin-bottom:0.1rem;">Base</div><span style="color:#ededef;font-weight:500;font-size:0.95rem;">Algiers, Algeria — Remote Worldwide</span></div>
+          </div>
+        </div>
+        <!-- Socials -->
+        <div class="reveal" style="margin-top:2.5rem;display:flex;gap:0.75rem;">
+          <a href="https://github.com/cognitodz" target="_blank" aria-label="GitHub" style="width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:#9293a5;text-decoration:none;transition:all 0.2s;" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48l-.01-1.69c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/cognitodz" target="_blank" aria-label="LinkedIn" style="width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:#9293a5;text-decoration:none;transition:all 0.2s;" class="social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:contact@cognitodz.com" aria-label="Email" style="width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:#9293a5;text-decoration:none;transition:all 0.2s;" class="social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- Right form -->
+      <div class="glass reveal reveal-delay-1" style="border-radius:20px;padding:2.5rem;border:1px solid rgba(62,207,142,0.12);" x-data="contactForm">
+        <div x-show="!sent">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+            <div class="form-field">
+              <label class="form-label">Name <span style="color:#f87171;">*</span></label>
+              <input class="form-input" type="text" placeholder="Karim Mansouri" x-model="name" id="contact-name" autocomplete="name"/>
+              <span x-show="errors.name" x-text="errors.name" style="color:#f87171;font-size:0.8rem;"></span>
+            </div>
+            <div class="form-field">
+              <label class="form-label">Email <span style="color:#f87171;">*</span></label>
+              <input class="form-input" type="email" placeholder="you@company.com" x-model="email" id="contact-email" autocomplete="email"/>
+              <span x-show="errors.email" x-text="errors.email" style="color:#f87171;font-size:0.8rem;"></span>
+            </div>
+          </div>
+          <div class="form-field" style="margin-bottom:1rem;">
+            <label class="form-label">Service Needed <span style="color:#f87171;">*</span></label>
+            <select class="form-select" x-model="service" id="contact-service">
+              <option value="" disabled selected>Select a service...</option>
+              <option value="mobile">Mobile App Development</option>
+              <option value="web">Web Application</option>
+              <option value="erp">ERP / CRM System</option>
+              <option value="ai">AI Integration</option>
+              <option value="scraping">Web Scraping / Data</option>
+              <option value="automation">System Automation</option>
+              <option value="database">Database Design</option>
+              <option value="other">Other</option>
+            </select>
+            <span x-show="errors.service" x-text="errors.service" style="color:#f87171;font-size:0.8rem;"></span>
+          </div>
+          <div class="form-field" style="margin-bottom:1.5rem;">
+            <label class="form-label">Project Details <span style="color:#f87171;">*</span></label>
+            <textarea class="form-textarea" placeholder="Describe your project, goals, timeline, and budget..." x-model="message" id="contact-message"></textarea>
+            <span x-show="errors.message" x-text="errors.message" style="color:#f87171;font-size:0.8rem;"></span>
+          </div>
+          <button @click="submit" class="btn-neon" style="width:100%;justify-content:center;" :disabled="sending">
+            <span x-show="!sending">Send Message →</span>
+            <span x-show="sending" style="display:flex;align-items:center;gap:0.5rem;">
+              <svg style="animation:spin 1s linear infinite;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"/><path d="M12 2a10 10 0 0 1 10 10" stroke-opacity="1"/></svg>
+              Sending...
+            </span>
+          </button>
+        </div>
+        <!-- Success state -->
+        <div x-show="sent" style="text-align:center;padding:2rem 0;">
+          <div style="font-size:3rem;margin-bottom:1rem;">✅</div>
+          <h3 style="font-weight:700;font-size:1.25rem;margin-bottom:0.75rem;" class="gradient-text">Message Sent!</h3>
+          <p style="color:#9293a5;line-height:1.7;">We've received your request and will get back to you within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════  FOOTER  ══════════════════════════════════════════ -->
+<footer style="padding:3rem 0 2rem;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;" class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:0.625rem;margin-bottom:1rem;">
+          <div style="width:32px;height:32px;background:linear-gradient(135deg,#3ecf8e,#00d4ff);border-radius:7px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.85rem;color:#080810;">CG</div>
+          <span style="font-weight:700;font-size:1rem;color:#ededef;">Cognito<span style="color:#3ecf8e;">DZ</span></span>
+        </div>
+        <p style="color:#9293a5;font-size:0.875rem;line-height:1.7;max-width:260px;">Expert freelance software engineers building scalable systems for ambitious clients worldwide.</p>
+      </div>
+      <div>
+        <h4 style="font-weight:600;font-size:0.9rem;margin-bottom:1rem;color:#ededef;">Services</h4>
+        <div style="display:flex;flex-direction:column;gap:0.625rem;">
+          <a href="#services" class="footer-link">Mobile Apps</a>
+          <a href="#services" class="footer-link">Web Applications</a>
+          <a href="#services" class="footer-link">ERP / CRM</a>
+          <a href="#services" class="footer-link">AI Integration</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-weight:600;font-size:0.9rem;margin-bottom:1rem;color:#ededef;">Company</h4>
+        <div style="display:flex;flex-direction:column;gap:0.625rem;">
+          <a href="#about"     class="footer-link">About Us</a>
+          <a href="#portfolio" class="footer-link">Portfolio</a>
+          <a href="#stack"     class="footer-link">Tech Stack</a>
+          <a href="#contact"   class="footer-link">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-weight:600;font-size:0.9rem;margin-bottom:1rem;color:#ededef;">Connect</h4>
+        <div style="display:flex;flex-direction:column;gap:0.625rem;">
+          <a href="mailto:contact@cognitodz.com" class="footer-link">Email Us</a>
+          <a href="https://github.com/cognitodz" target="_blank" class="footer-link">GitHub</a>
+          <a href="https://linkedin.com/company/cognitodz" target="_blank" class="footer-link">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(62,207,142,0.1);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+      <p style="color:#9293a5;font-size:0.8rem;">© 2025 CognitoDZ. All rights reserved.</p>
+      <p style="color:#9293a5;font-size:0.8rem;" class="mono">Built with ❤️ in Algiers, Algeria</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════  RESPONSIVE STYLES  ════════════════════════════════ -->
+<style>
+@keyframes spin { to { transform: rotate(360deg); } }
+.hidden-mobile { display: flex; }
+.social-icon:hover { color: #3ecf8e !important; border-color: rgba(62,207,142,0.3) !important; background: rgba(62,207,142,0.08) !important; }
+@media (max-width: 900px) {
+  .hidden-mobile { display: none !important; }
+  #hamburger { display: flex !important; }
+  .about-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  .services-grid { grid-template-columns: repeat(2,1fr) !important; }
+  .portfolio-grid { grid-template-columns: repeat(2,1fr) !important; }
+  .testimonials-grid { grid-template-columns: 1fr !important; }
+  .stats-grid { grid-template-columns: repeat(2,1fr) !important; }
+}
+@media (max-width: 560px) {
+  .services-grid, .portfolio-grid { grid-template-columns: 1fr !important; }
+  .stats-grid { grid-template-columns: repeat(2,1fr) !important; }
+  .stat-card::after { display: none; }
+}
+</style>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

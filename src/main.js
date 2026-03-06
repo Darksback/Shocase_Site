@@ -130,10 +130,26 @@ Alpine.data('contactForm', () => ({
     async submit() {
         if (!this.validate()) return;
         this.sending = true;
-        // Simulate sending (replace with real API call)
-        await new Promise(r => setTimeout(r, 1500));
-        this.sending = false;
-        this.sent = true;
+        this.error = false;
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: this.name,
+                    email: this.email,
+                    service: this.service,
+                    message: this.message,
+                }),
+            });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.error || 'Server error');
+            this.sent = true;
+        } catch (err) {
+            this.error = err.message || 'Something went wrong. Please try again.';
+        } finally {
+            this.sending = false;
+        }
     }
 }))
 

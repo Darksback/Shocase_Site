@@ -17,15 +17,15 @@ export default async function handler(req, res) {
 
     try {
         await resend.emails.send({
-            from: 'CognitoDZ Contact <onboarding@resend.dev>',
+            from: 'Shell64 Contact <onboarding@resend.dev>',
             to: ['nishki25@gmail.com'],
             replyTo: email,
-            subject: `[CognitoDZ] New Project Inquiry — ${service}`,
+            subject: `[Shell64] New Project Inquiry — ${service}`,
             html: `
         <div style="font-family:sans-serif;max-width:600px;margin:0 auto;background:#0f0f1a;color:#ededef;padding:2rem;border-radius:12px;border:1px solid rgba(62,207,142,0.2);">
           <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:2rem;">
-            <div style="width:36px;height:36px;background:linear-gradient(135deg,#3ecf8e,#00d4ff);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:#080810;text-align:center;line-height:36px;">CG</div>
-            <span style="font-weight:700;font-size:1.2rem;">Cognito<span style="color:#3ecf8e;">DZ</span> — New Inquiry</span>
+            <div style="width:36px;height:36px;background:linear-gradient(135deg,#3ecf8e,#00d4ff);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:#080810;text-align:center;line-height:36px;">S6</div>
+            <span style="font-weight:700;font-size:1.2rem;">Shell<span style="color:#3ecf8e;">64</span> — New Inquiry</span>
           </div>
           <table style="width:100%;border-collapse:collapse;">
             <tr>

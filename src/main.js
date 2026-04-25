@@ -17,6 +17,16 @@ Alpine.data('portfolio', () => ({
     ],
     projects: [
         {
+            id: 10,
+            title: 'MW Industry',
+            desc: 'Premium landing page and e-commerce shop for smart lock systems. Features a custom product catalog, Drizzle-powered backend, and sleek cyberpunk UI.',
+            category: 'web',
+            tags: ['Next.js', 'PostgreSQL', 'Drizzle', 'Tailwind'],
+            color: '#3ecf8e',
+            emoji: '🔐',
+            link: 'https://mw-industry.vercel.app'
+        },
+        {
             id: 1,
             title: 'Pilotik ERP',
             desc: 'Full-featured ERP system for field operations, interventions management, and real-time team tracking.',

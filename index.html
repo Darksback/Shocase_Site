@@ -7,12 +7,12 @@
   <meta name="description" content="Shell64 is a freelance software development team specializing in mobile apps, web apps, ERP systems, AI integration, web scraping, automation, and custom software. Based in Algeria, serving clients worldwide."/>
   <meta name="keywords" content="software development, mobile apps, web apps, ERP, AI integration, web scraping, automation, CRM, Algeria, freelance developers"/>
   <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://cognitodz.com/"/>
+  <link rel="canonical" href="https://shell64.com/"/>
   <!-- Open Graph -->
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Shell64 | Expert Software Development Team"/>
   <meta property="og:description" content="Freelance dev team building mobile apps, web apps, ERP systems, and AI-powered solutions."/>
-  <meta property="og:url" content="https://cognitodz.com/"/>
+  <meta property="og:url" content="https://shell64.com/"/>
   <meta property="og:site_name" content="Shell64"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Shell64 | Expert Software Development"/>
@@ -330,11 +330,17 @@
               <span class="mono" style="font-size:0.65rem;padding:0.2rem 0.6rem;border-radius:4px;white-space:nowrap;flex-shrink:0;" :style="`background:${p.color}20;color:${p.color};border:1px solid ${p.color}40`" x-text="p.category"></span>
             </div>
             <p style="color:#9293a5;font-size:0.875rem;line-height:1.6;margin-bottom:1.25rem;" x-text="p.desc"></p>
-            <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+            <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem;">
               <template x-for="tag in p.tags" :key="tag">
                 <span class="tech-badge" x-text="tag"></span>
               </template>
             </div>
+            <template x-if="p.link">
+              <a :href="p.link" target="_blank" class="btn-neon" style="display:inline-flex;width:100%;justify-content:center;padding:0.6rem;font-size:0.8rem;text-decoration:none;">
+                View Project 
+                <svg style="margin-left:0.5rem;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </template>
           </div>
         </div>
       </template>

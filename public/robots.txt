@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shell64.com/sitemap.xml
+Sitemap: https://shell64.vercel.app/sitemap.xml

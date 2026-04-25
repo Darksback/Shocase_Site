@@ -19,7 +19,7 @@ Alpine.data('portfolio', () => ({
         {
             id: 10,
             title: 'MW Industry',
-            desc: 'Premium landing page and e-commerce shop for smart lock systems. Features a custom product catalog, Drizzle-powered backend, and sleek cyberpunk UI.',
+            desc: 'Premium landing page and e-commerce shop for smart lock systems. Features a custom product catalog, SEO Optimized blog section, Admin Panel for managing orders and site content, and Responsive designs.',
             category: 'web',
             tags: ['Next.js', 'PostgreSQL', 'Drizzle', 'Tailwind'],
             color: '#3ecf8e',

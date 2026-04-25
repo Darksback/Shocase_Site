@@ -8,7 +8,7 @@ export default async function handler(req, res) {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    const { name, email, service, budget, timeline, message } = req.body;
+    const { name, email, service, budget, timeline, phone, message } = req.body;
 
     // Basic server-side validation
     if (!name || !email || !service || !budget || !timeline || !message) {
@@ -30,7 +30,10 @@ export default async function handler(req, res) {
           <table style="width:100%;border-collapse:collapse;">
             <tr>
               <td style="padding:0.75rem 1rem;background:rgba(62,207,142,0.05);border:1px solid rgba(62,207,142,0.1);border-radius:6px 6px 0 0;color:#9293a5;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;">FROM</td>
-              <td style="padding:0.75rem 1rem;background:rgba(62,207,142,0.05);border:1px solid rgba(62,207,142,0.1);border-top:0;font-weight:600;">${name} &lt;${email}&gt;</td>
+              <td style="padding:0.75rem 1rem;background:rgba(62,207,142,0.05);border:1px solid rgba(62,207,142,0.1);border-top:0;font-weight:600;">
+                ${name} &lt;${email}&gt;
+                ${phone ? `<div style="font-size:0.8rem;color:#9293a5;margin-top:0.25rem;">Phone: ${phone}</div>` : ''}
+              </td>
             </tr>
             <tr>
               <td style="padding:0.75rem 1rem;background:rgba(62,207,142,0.03);border:1px solid rgba(62,207,142,0.1);border-top:0;color:#9293a5;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;">SERVICE</td>

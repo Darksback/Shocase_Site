@@ -124,6 +124,7 @@ Alpine.data('contactForm', () => ({
     service: '',
     budget: '',
     timeline: '',
+    phone: '',
     message: '',
     sending: false,
     sent: false,
@@ -155,6 +156,7 @@ Alpine.data('contactForm', () => ({
                     service: this.service,
                     budget: this.budget,
                     timeline: this.timeline,
+                    phone: this.phone,
                     message: this.message,
                 }),
             });

@@ -462,16 +462,20 @@
       <!-- Right form -->
       <div class="glass reveal reveal-delay-1" style="border-radius:20px;padding:2.5rem;border:1px solid rgba(62,207,142,0.12);" x-data="contactForm">
         <div x-show="!sent">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1rem;">
             <div class="form-field">
               <label class="form-label">Name <span style="color:#f87171;">*</span></label>
-              <input class="form-input" type="text" placeholder="Karim Mansouri" x-model="name" id="contact-name" autocomplete="name"/>
+              <input class="form-input" type="text" placeholder="Karim" x-model="name" id="contact-name" autocomplete="name"/>
               <span x-show="errors.name" x-text="errors.name" style="color:#f87171;font-size:0.8rem;"></span>
             </div>
             <div class="form-field">
               <label class="form-label">Email <span style="color:#f87171;">*</span></label>
               <input class="form-input" type="email" placeholder="you@company.com" x-model="email" id="contact-email" autocomplete="email"/>
               <span x-show="errors.email" x-text="errors.email" style="color:#f87171;font-size:0.8rem;"></span>
+            </div>
+            <div class="form-field">
+              <label class="form-label">Phone</label>
+              <input class="form-input" type="tel" placeholder="+213..." x-model="phone" id="contact-phone" autocomplete="tel"/>
             </div>
           </div>
           <div class="form-field" style="margin-bottom:1rem;">

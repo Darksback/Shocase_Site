@@ -8,10 +8,10 @@ export default async function handler(req, res) {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    const { name, email, service, message } = req.body;
+    const { name, email, service, budget, timeline, message } = req.body;
 
     // Basic server-side validation
-    if (!name || !email || !service || !message) {
+    if (!name || !email || !service || !budget || !timeline || !message) {
         return res.status(400).json({ error: 'All fields are required.' });
     }
 
@@ -35,6 +35,14 @@ export default async function handler(req, res) {
             <tr>
               <td style="padding:0.75rem 1rem;background:rgba(62,207,142,0.03);border:1px solid rgba(62,207,142,0.1);border-top:0;color:#9293a5;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;">SERVICE</td>
               <td style="padding:0.75rem 1rem;background:rgba(62,207,142,0.03);border:1px solid rgba(62,207,142,0.1);border-top:0;color:#3ecf8e;font-weight:600;">${service}</td>
+            </tr>
+            <tr>
+              <td style="padding:0.75rem 1rem;background:rgba(62,207,142,0.02);border:1px solid rgba(62,207,142,0.1);border-top:0;color:#9293a5;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;">BUDGET</td>
+              <td style="padding:0.75rem 1rem;background:rgba(62,207,142,0.02);border:1px solid rgba(62,207,142,0.1);border-top:0;font-weight:600;">${budget}</td>
+            </tr>
+            <tr>
+              <td style="padding:0.75rem 1rem;background:rgba(62,207,142,0.01);border:1px solid rgba(62,207,142,0.1);border-top:0;color:#9293a5;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;">TIMELINE</td>
+              <td style="padding:0.75rem 1rem;background:rgba(62,207,142,0.01);border:1px solid rgba(62,207,142,0.1);border-top:0;font-weight:600;">${timeline}</td>
             </tr>
             <tr>
               <td colspan="2" style="padding:0.75rem 1rem;background:rgba(62,207,142,0.02);border:1px solid rgba(62,207,142,0.1);border-top:0;border-radius:0 0 6px 6px;">

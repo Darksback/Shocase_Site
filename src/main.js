@@ -122,6 +122,8 @@ Alpine.data('contactForm', () => ({
     name: '',
     email: '',
     service: '',
+    budget: '',
+    timeline: '',
     message: '',
     sending: false,
     sent: false,
@@ -133,6 +135,8 @@ Alpine.data('contactForm', () => ({
         if (!this.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email))
             this.errors.email = 'Valid email required.';
         if (!this.service) this.errors.service = 'Please select a service.';
+        if (!this.budget) this.errors.budget = 'Please select a budget range.';
+        if (!this.timeline) this.errors.timeline = 'Please select a timeline.';
         if (!this.message.trim() || this.message.length < 20)
             this.errors.message = 'Message must be at least 20 characters.';
         return Object.keys(this.errors).length === 0;
@@ -149,6 +153,8 @@ Alpine.data('contactForm', () => ({
                     name: this.name,
                     email: this.email,
                     service: this.service,
+                    budget: this.budget,
+                    timeline: this.timeline,
                     message: this.message,
                 }),
             });
